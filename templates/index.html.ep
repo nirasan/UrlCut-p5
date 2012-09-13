@@ -1,0 +1,16 @@
+% layout 'default';
+% title '短縮URL';
+
+<h2>短縮URL</h2>
+
+% if ($from && $to) {
+  <p>短縮URLを作成しました</p>
+  <p>元のURL:<b><%= $from %></b></p>
+  <p>短縮URL:<b><%= $to %></b></p>
+% }
+
+<form method="POST" action="/create">
+  <input type="text" name="url" />
+  <input type="submit" value="短縮URL作成" />
+</form>
+
